@@ -10,5 +10,8 @@ sudo: false
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
+before_script:
+  - composer install
+
 script:
   - vendor/bin/phpunit --verbose
