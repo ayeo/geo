@@ -1,7 +1,6 @@
 <?php
 
 use Ayeo\Geo\Coordinate\Degree as Coordinate;
-//use Ayeo\Geo\DistanceCalculator;
 
 class CoordinateDegreeTest extends PHPUnit_Framework_TestCase
 {
