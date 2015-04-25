@@ -14,4 +14,4 @@ before_script:
   - composer install
 
 script:
-  - vendor/bin/phpunit --verbose
+  - vendor/bin/phpunit --configuration phpunit.xml
