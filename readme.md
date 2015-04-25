@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ayeo/geo.svg)](https://travis-ci.org/ayeo/geo)
+[![Build Status](https://travis-ci.org/ayeo/geo.svg?branch=master)](https://travis-ci.org/ayeo/geo)
 
 Geo Distance
 ============
