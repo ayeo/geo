@@ -10,7 +10,7 @@ Install by Composer
 ===================
 
 ```
-require: "ayeo/geo": "dev-master"
+require: "ayeo/geo": "1.0.0"
 ```
 
 Example use
