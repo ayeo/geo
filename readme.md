@@ -3,7 +3,7 @@
 Geo Distance
 ============
 
-Simply way to calculate distance between two geo coordinates. There is [Vincenty's formula](http://en.wikipedia.org/wiki/Vincenty%27s_formula) used to do calculations.
+Simply way to calculate distance between two geo coordinates. There is [Vincenty's formula](http://en.wikipedia.org/wiki/Vincenty%27s_formula) used to do the  calculations.
 
 
 Install by Composer
