@@ -44,7 +44,7 @@ DistanceCalculator allows to set radius, precision and multiplier. Default radiu
 ```php
 $calculator = new DistanceCalculator();
 
-$calculator->setMultiplier(1); //default value, returns distance i meters
+$calculator->setMultiplier(1); //default value, returns distance in meters
 $calculator->setMultiplier(1/1000); //kilometers
 $calculator->setMultiplier(1/1000000); //thousands of kilometers
 
