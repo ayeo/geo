@@ -5,6 +5,15 @@ Geo Distance
 
 Simply way to calculate distance between two geo coordinates
 
+Install by Composer
+===================
+
+```
+require: "ayeo/geo": "dev-master"
+```
+
+Example use
+===========
 
 ```php
         //London: 51°30′N 0°07′W
