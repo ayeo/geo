@@ -5,7 +5,44 @@ use Ayeo\Geo\Coordinate\AbstractCoordinate;
 
 class DistanceCalculator
 {
-    const EARTH_RADIUS = 6371000;
+    /**
+     * @var int
+     */
+    private $radius = 6371000;
+
+    /**
+     * @var int
+     */
+    private $precision = 2;
+
+    /**
+     * @var int
+     */
+    private $multiplier = 1;
+
+    /**
+     * @param integer $precision
+     */
+    public function setPrecision($precision)
+    {
+        $this->precision = $precision;
+    }
+
+    /**
+     * @param float $multiplier
+     */
+    public function setMultiplier($multiplier)
+    {
+        $this->multiplier = $multiplier;
+    }
+
+    /**
+     * @param $radius in meters
+     */
+    public function setRadius($radius)
+    {
+        $this->radius = $radius;
+    }
 
     /**
      * @link http://en.wikipedia.org/wiki/Vincenty%27s_formulae
@@ -13,7 +50,7 @@ class DistanceCalculator
      * @param AbstractCoordinate $coordinateB
      * @return float distance in meters
      */
-    public function calculate(AbstractCoordinate $coordinateA, AbstractCoordinate $coordinateB)
+    public function getDistance(AbstractCoordinate $coordinateA, AbstractCoordinate $coordinateB)
     {
         $lonDelta = $coordinateB->getRadianLongitude() - $coordinateA->getRadianLongitude();
 
@@ -28,6 +65,15 @@ class DistanceCalculator
 
         $angle = atan2(sqrt($a), $b);
 
-        return $angle * self::EARTH_RADIUS;
+        return $this->process($angle * $this->radius);
+    }
+
+    /**
+     * @param $distanceInMeters
+     * @return float
+     */
+    private function process($distanceInMeters)
+    {
+        return round($distanceInMeters * $this->multiplier, $this->precision);
     }
 }

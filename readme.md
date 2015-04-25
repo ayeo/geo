@@ -31,10 +31,24 @@ $buenosAires->setLatitude(34, 35, 00, 'S');
 $buenosAires->setLongitude(58, 55, 00, 'W');
 
 $calculator = new DistanceCalculator();
-$distance = $calculator->calculate($london, $buenosAires); //returns result in meters
+$calculator->getDistance($london, $buenosAires); //result in meters
 ```
         
 You can also use decimal coordinates 
 ```php
 $example = new Coordinate\Decimal(53.2311, 18.1222);
+```
+
+DistanceCalculator allows to set radius, precision and multiplier. Default radius is set to Earth.
+
+```php
+$calculator = new DistanceCalculator();
+
+$calculator->setMultiplier(1); default value, returns distance i meters
+$calculator->setMultiplier(1/1000); kilometers
+$calculator->setMultiplier(1/1000000); thousands of kilometers
+
+$calculator->setRadius(1737100); //Moon radius;
+
+$calculator->setPrecision(0); //returns integers
 ```
