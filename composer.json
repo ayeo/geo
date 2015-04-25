@@ -1,5 +1,5 @@
 {
-    "name": "ayeo/geolocation",
+    "name": "ayeo/geo",
     "description": "Calculate distance between two coordinates",
     "type": "library",
     "license": "MIT",
@@ -10,5 +10,13 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "require-dev": {
+      "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "Ayeo\\Geo\\": "src"
+      }
+    }
 }
