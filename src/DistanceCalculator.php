@@ -11,7 +11,7 @@ class DistanceCalculator
      * @link http://en.wikipedia.org/wiki/Vincenty%27s_formulae
      * @param AbstractCoordinate $coordinateA
      * @param AbstractCoordinate $coordinateB
-     * @return float
+     * @return float distance in meters
      */
     public function calculate(AbstractCoordinate $coordinateA, AbstractCoordinate $coordinateB)
     {

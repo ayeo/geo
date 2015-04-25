@@ -31,7 +31,7 @@ $buenosAires->setLatitude(34, 35, 00, 'S');
 $buenosAires->setLongitude(58, 55, 00, 'W');
 
 $calculator = new DistanceCalculator();
-$distance = $calculator->calculate($london, $buenosAires);
+$distance = $calculator->calculate($london, $buenosAires); //returns result in meters
 ```
         
 You can also use decimal coordinates 
