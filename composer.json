@@ -1,6 +1,12 @@
 {
     "name": "ayeo/geo",
     "description": "Calculate distance between two coordinates",
+    "version": "1.0.0",
+    "keywords": ["earth", "coordinate", "geolocation", "distance"],
+    "support": {
+      "email": "me@ayeo.pl"
+    },
+    "time": "2015-04-25",
     "type": "library",
     "license": "MIT",
     "authors": [
