@@ -17,6 +17,9 @@ Example use
 ===========
 
 ```php
+use Ayeo\Geo\Coordinate;
+use Ayeo\Geo\DistanceCalculator;
+
 //London: 51°30′N 0°07′W
 $london = new Coordinate\Degree();
 $london->setLatitude(51, 30, 00, 'N');
