@@ -1,0 +1,14 @@
+{
+    "name": "ayeo/geolocation",
+    "description": "Calculate distance between two coordinates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ayeo",
+            "email": "me@ayeo.pl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
