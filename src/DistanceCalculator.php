@@ -17,10 +17,13 @@ class DistanceCalculator
     {
         $lonDelta = $coordinateB->getRadianLongitude() - $coordinateA->getRadianLongitude();
 
-        $a = pow(cos($coordinateB->getRadianLatitude()) * sin($lonDelta), 2) +
+        $a =
+            pow(cos($coordinateB->getRadianLatitude()) * sin($lonDelta), 2) +
             pow(cos($coordinateA->getRadianLatitude()) * sin($coordinateB->getRadianLatitude()) -
-                sin($coordinateA->getRadianLatitude()) * cos($coordinateB->getRadianLatitude()) * cos($lonDelta), 2);
-        $b = sin($coordinateA->getRadianLatitude()) * sin($coordinateB->getRadianLatitude()) +
+            sin($coordinateA->getRadianLatitude()) * cos($coordinateB->getRadianLatitude()) * cos($lonDelta), 2);
+
+        $b =
+            sin($coordinateA->getRadianLatitude()) * sin($coordinateB->getRadianLatitude()) +
             cos($coordinateA->getRadianLatitude()) * cos($coordinateB->getRadianLatitude()) * cos($lonDelta);
 
         $angle = atan2(sqrt($a), $b);

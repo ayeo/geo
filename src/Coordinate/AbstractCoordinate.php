@@ -30,11 +30,17 @@ abstract class AbstractCoordinate
         return $this->latitude;
     }
 
+    /**
+     * @return float
+     */
     public function getRadianLatitude()
     {
         return deg2rad($this->latitude);
     }
 
+    /**
+     * @return float
+     */
     public function getRadianLongitude()
     {
         return deg2rad($this->longitude);

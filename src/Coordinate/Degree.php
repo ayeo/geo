@@ -11,13 +11,14 @@ class Degree extends AbstractCoordinate
      */
     public function setLatitude($degrees, $minutes, $seconds, $direction = "N")
     {
-        $x = $degrees + $minutes / 60 + $seconds / 3600;
-
-        if ($direction === "S") {
-            $x = $x * -1;
+        if ($direction === "N")
+        {
+            $this->latitude = $this->convert($degrees, $minutes, $seconds);
         }
-
-        $this->latitude = $x;
+        else
+        {
+            $this->latitude = $this->convert($degrees, $minutes, $seconds) * -1;
+        }
     }
 
     /**
@@ -28,12 +29,24 @@ class Degree extends AbstractCoordinate
      */
     public function setLongitude($degrees, $minutes, $seconds, $direction = "E")
     {
-        $x = $degrees + $minutes / 60 + $seconds / 3600;
-
-        if ($direction === "W") {
-            $x = $x * -1;
+        if ($direction === "E")
+        {
+            $this->longitude = $this->convert($degrees, $minutes, $seconds);
         }
+        else
+        {
+            $this->longitude = $this->convert($degrees, $minutes, $seconds) * -1;
+        }
+    }
 
-        $this->longitude = $x;
+    /**
+     * @param integer $degrees
+     * @param integer $minutes
+     * @param integer $seconds
+     * @return float
+     */
+    private function convert($degrees, $minutes, $seconds)
+    {
+        return $degrees + $minutes / 60 + $seconds / 3600;
     }
 }

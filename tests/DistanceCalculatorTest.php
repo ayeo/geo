@@ -17,11 +17,8 @@ class DistanceCalculatorTest extends PHPUnit_Framework_TestCase
         $gliwice->setLatitude(50, 17, 32, 'N');
         $gliwice->setLongitude(18, 40, 03, 'E');
 
-        //Buenos Aires: 34°35′S 58°55′W
-
         $calculator = new DistanceCalculator();
         $distance = $calculator->calculate($grudziądz, $gliwice);
-
 
         $this->assertEquals(355.28, $distance / 1000, '', 0.01);
     }
